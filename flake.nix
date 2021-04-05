@@ -98,6 +98,8 @@
               "sed -i '/^default /d' ${efi.efiSysMountPoint}/loader/loader.conf"}
             '';
 
+            home-manager = base: custom base.activationPackage "$PROFILE/activate";
+
             noop = base: custom base ":";
           };
 
